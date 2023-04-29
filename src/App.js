@@ -1,10 +1,10 @@
 import './App.css';
 
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import Home from './Pages/Home';
-import ProgramTree from './Pages/ProgramTree';
-import Years from './Pages/Years';
-import Calculator from './Pages/Calculator';
+import Home from './pages/home/Home';
+import ProgramTree from './pages/resources/ProgramTree';
+import Years from './pages/years/Years';
+import Calculator from './pages/calculator/Calculator';
 
 function App() {
   return (
