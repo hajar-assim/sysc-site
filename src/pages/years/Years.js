@@ -1,9 +1,12 @@
-import NavBar from "../NavBar";
+import NavBar from "../home/navBar/NavBar";
+import * as styles from "./yearsElements";
+
+
 const Years = () => {
     return (
         <>
         <NavBar/>
-        <p>Years</p>
+        <styles.yearTitle>year one</styles.yearTitle>
         </>
     );
 }
