@@ -47,7 +47,7 @@ export const courses = [
 {
     title: "Elective",
     description: "Complementary Studies Elective",
-    color: "#421511"
+    color: "#800020"
 },
 {
     title: "ECOR 1041",

@@ -1,9 +1,10 @@
-<<<<<<< Updated upstream
 import NavBar from "../home/navBar/NavBar";
-=======
-import NavBar from "../home/NavBar/NavBar";
 import { useState } from "react";
->>>>>>> Stashed changes
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
+import * as styled from "./popup";
+import HelpPopUp from "./pop";
+
 const Calculator = () => {
     
     
@@ -22,6 +23,12 @@ const Calculator = () => {
     const [grade4, setGrade4] = useState('');
     const [grade5, setGrade5] = useState('');
 
+    const [courseCode1, setCourseCode1] = useState();
+    const [courseCode2, setCourseCode2] = useState();
+    const [courseCode3, setCourseCode3] = useState();
+    const [courseCode4, setCourseCode4] = useState();
+    const [courseCode5, setCourseCode5] = useState();
+
     
     function calc() {
         var qualityPoints = parseFloat(cgpa) * parseFloat(credits);
@@ -29,7 +36,7 @@ const Calculator = () => {
         var newGrades = convertGrades();
         var sumGrades = qualityPoints;
         for (let i = 0; i < newGrades.length; i++) {
-            if(! isNaN(newGrades[i])){
+            if(! isNaN(parseFloat(newGrades[i]))){
                 sumGrades += newGrades[i];
             }
         }
@@ -37,19 +44,15 @@ const Calculator = () => {
         var newCredits = [course1,course2,course3,course4,course5];
         var sumCredits = (parseFloat(credits));
         for (let i = 0; i < newCredits.length; i++) {
-            if(! isNaN(newCredits[i])){
+            if(! isNaN(parseFloat(newCredits[i]))){
                 sumCredits += parseFloat(newCredits[i]);
             }
         }
-        alert(newCredits);
-        alert(newGrades);
-        alert(sumCredits);
-        alert(sumGrades);
 
         var newCGPA = sumGrades / sumCredits;
 
-        alert(newCGPA);
-        <p> Your new calculated CGPA is {newCGPA}!! </p>
+        document.getElementById("results").innerHTML = '<p>' +  'Your new calculated CGPA is '+  newCGPA.toFixed(2) + '!! </p>';
+        
     }
 
     function convertGrades(){
@@ -121,11 +124,40 @@ const Calculator = () => {
         return newGrades;
     }
 
+    function clear(){
+        setCourse1('');
+        setCourse2('');
+        setCourse3('');
+        setCourse4('');
+        setCourse5('');
+
+        setGrade1('');
+        setGrade2('');
+        setGrade3('');
+        setGrade4('');
+        setGrade5('');
+
+        setCourseCode1('');
+        setCourseCode2('');
+        setCourseCode3('');
+        setCourseCode4('');
+        setCourseCode5('');
+
+        document.getElementById("results").innerHTML = '<p> </p>'
+    }
+
+    function help(){
+        document.getElementById("help").innerHTML = '<p> ffjbndf</p>';  
+    }
+
     return (
         <>
-        <NavBar/>
+        <NavBar/> 
+        <head><link rel="stylesheet" href="src/index.css" /></head>
+        <p>This CGPA calculator is in accordance with Carleton University's Grade Point Scale (12 point scale).</p>
         <p>Enter your current CGPA: <input type="number" value = {cgpa} onChange = {(event) => setCGPA(event.target.value)} /> </p> 
-        <p>Enter the number of credits: <input type="number" value = {credits} onChange = {(event) => setCredits(event.target.value)}/> </p>
+        <p>Enter the number of credits: <input type="number" value = {credits} onChange = {(event) => setCredits(event.target.value)}/> <a class="help-icon" onclick={clear}><FontAwesomeIcon icon={faQuestionCircle} /></a></p>
+        <p id = "help">ff</p>
 
         <table>
             <tr>
@@ -135,34 +167,35 @@ const Calculator = () => {
             </tr>
 
             <tr>
-                <th> <input placeholder = "ex: SYSC2004"/> </th>
+                <th> <input placeholder = "ex: SYSC2004" value = {courseCode1} onChange = {(event) => setCourseCode1(event.target.value)}/> </th>
                 <th> <input type="number" placeholder = "ex: 0.50" value = {course1} onChange = {(event) => setCourse1(event.target.value)}/> </th>
                 <th> <input placeholder = "ex: A+" value = {grade1} onChange = {(event) => setGrade1(event.target.value)} /> </th>
             </tr>
 
             <tr>
-                <th> <input/> </th>
+                <th> <input value = {courseCode2} onChange = {(event) => setCourseCode2(event.target.value)}/> </th>
                 <th> <input type="number" value = {course2} onChange = {(event) => setCourse2(event.target.value)}/> </th>
                 <th> <input value = {grade2} onChange = {(event) => setGrade2(event.target.value)} /> </th>
             </tr>
             <tr>
-                <th> <input/> </th>
+                <th> <input value = {courseCode3} onChange = {(event) => setCourseCode3(event.target.value)}/> </th>
                 <th> <input type="number" value = {course3} onChange = {(event) => setCourse3(event.target.value)}/> </th>
                 <th> <input value = {grade3} onChange = {(event) => setGrade3(event.target.value)} /> </th>
             </tr>
             <tr>
-                <th> <input/> </th>
+                <th> <input value = {courseCode4} onChange = {(event) => setCourseCode4(event.target.value)}/> </th>
                 <th> <input type="number" value = {course4} onChange = {(event) => setCourse4(event.target.value)}/> </th>
                 <th> <input  value = {grade4} onChange = {(event) => setGrade4(event.target.value)} /> </th>
             </tr>
             <tr>
-                <th> <input/> </th>
+                <th> <input value = {courseCode5} onChange = {(event) => setCourseCode5(event.target.value)}/> </th>
                 <th> <input type="number" value = {course5} onChange = {(event) => setCourse5(event.target.value)}/> </th>
                 <th> <input value = {grade5} onChange = {(event) => setGrade5(event.target.value)} /> </th>
             </tr>
         </table>
         <button onClick={calc}>Calculate Now!</button>
-
+        <button onClick = {clear}>Clear</button>
+        <div id="results"> </div>
         </>
     );
 }

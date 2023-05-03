@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.help-icon {
+  text-decoration: none;
+}
+
+.help-icon:hover{
+  color: #555;
+  cursor: pointer;
+}
