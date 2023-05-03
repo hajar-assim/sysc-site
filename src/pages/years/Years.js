@@ -27,9 +27,8 @@ const Years = () => {
                 </styles.colourContainer>
 
             ))}
-            
-
         </styles.courseContainer>
+
 
         <styles.yearTitle>year two</styles.yearTitle>
         <styles.courseContainer>
@@ -39,14 +38,8 @@ const Years = () => {
                 </styles.colourContainer>
 
             ))}
-            
-
         </styles.courseContainer>
 
-        {/* pop up when you click a specific course */}
-        <CoursePopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}>
-            this was triggered for {selectedCourse}.
-        </CoursePopUp>
 
         <styles.yearTitle>year three</styles.yearTitle>
         <styles.courseContainer>
@@ -60,10 +53,6 @@ const Years = () => {
 
         </styles.courseContainer>
 
-        {/* pop up when you click a specific course */}
-        <CoursePopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}>
-            this was triggered for {selectedCourse}.
-        </CoursePopUp>
 
         <styles.yearTitle>year four</styles.yearTitle>
         <styles.courseContainer>
@@ -81,8 +70,7 @@ const Years = () => {
         <CoursePopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}>
             this was triggered for {selectedCourse}.
         </CoursePopUp>
-
-
+        
         </>
     );
 }

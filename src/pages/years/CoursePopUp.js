@@ -7,6 +7,8 @@ function CoursePopUp(props) {
       <styled.popUpCard>
         <styled.textContainer>
         {props.children}
+        <button>Midterms/Tests</button>
+        <button>Exams</button>
         <button onClick={() => props.setTrigger(false)}>Close</button>
         </styled.textContainer>
       </styled.popUpCard>
