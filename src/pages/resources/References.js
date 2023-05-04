@@ -5,6 +5,7 @@ function References() {
   return (
     <div>
        <NavBar />
+       references
     </div>
   )
 }

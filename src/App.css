@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   margin: 100px;
+  font-family: 'Brygada 1918', serif;
 }
 
 .App-logo {
@@ -52,4 +53,20 @@
 }
 .nav a {
   color: inherit;
+}
+
+/* Hide the spinner buttons on the number input */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  font-family: 'Brygada 1918', serif;
+}
+
+input {
+  font-family: 'Brygada 1918', serif;
 }

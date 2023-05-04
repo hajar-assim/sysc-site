@@ -29,13 +29,12 @@
 }
 
 .navbar a:hover {
-  background-color: #CCCCFF;
-  color: black;
-  box-sizing: border-box;
+  color: #CCCCFF;
+  /* box-sizing: border-box;
   padding: 26px;
   font-size: 35px;
   border: 1px black;
-  transition: background-color 0.5s ease-out, color 0.5s ease-out;
+  transition: background-color 0.5s ease-out, color 0.5s ease-out; */
 }
 
 .navbar .rightSide button {

@@ -5,6 +5,7 @@ function Faq() {
   return (
     <div>
       <NavBar />
+      faq
     </div>
   )
 }
