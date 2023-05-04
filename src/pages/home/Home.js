@@ -1,10 +1,12 @@
 import NavBar from "../home/navBar/NavBar";
+import * as styles from "./homeElements";
+
 
 const Home = () => {
     return (
         <>
         <NavBar/>
-        <p>Home</p>
+        <styles.syscTitle>success in sysc</styles.syscTitle>
         </>
     );
 }

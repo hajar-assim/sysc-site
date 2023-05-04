@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 // title of years
 export const yearTitle = styled.h1`
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
-    font-family: 'Epilogue', sans-serif;
+    font-family: 'Brygada 1918', serif;
     text-align: left;
     border-radius: 10px;
     border-color: black;
-    margin: 30px;
+    margin: 20px;
 `
 
 export const courseContainer = styled.div`

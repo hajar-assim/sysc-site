@@ -3,7 +3,7 @@ import * as styled from "./yearsElements";
 
 function CoursePopUp(props) {
   return (props.trigger) ? (
-    <styled.popUpBackground onClick={() => props.setTrigger(false)}>
+    <styled.popUpBackground>
       <styled.popUpCard>
         <styled.textContainer>
         {props.children}

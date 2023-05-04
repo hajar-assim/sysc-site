@@ -14,13 +14,12 @@ function App() {
     
       <Routes>
         <Route path="/" element = {<Home/>} />
-        
         <Route path="/years" element = {<Years/>} />
         <Route path="/programtree" element = {<ProgramTree/>} />
         <Route path="/calculator" element = {<Calculator/>} />
         
       </Routes>
-      
+
       </div>
   </BrowserRouter>
   );
