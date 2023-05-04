@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <>
         <NavBar/>
-        <styles.syscTitle>success in sysc</styles.syscTitle>
+        <styles.syscTitle>success in sysdc</styles.syscTitle>
         </>
     );
 }
