@@ -1,0 +1,69 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Brygada 1918', serif;
+    font-size: 20px;
+} 
+
+.navbar .rightside {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+    
+}
+  
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.navbar a:hover {
+    color: #CCCCFF;
+
+}
+
+.navbar .rightSide button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+  
+.navbar .rightSide svg {
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+    .navbar .rightSide a {
+      width: 70px;
+    }
+    .navbar .leftSide {
+      padding-left: 50px;
+    }
+}
+  
+@media only screen and (max-width: 600px) {
+    .navbar .rightSide a {
+      display: none;
+    }
+  
+    .navbar .rightSide {
+      justify-content: flex-end;
+      padding-right: 50px;
+    }
+  
+    .navbar .rightSide button {
+      display: inherit;
+    }
+}

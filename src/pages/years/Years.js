@@ -1,9 +1,9 @@
 import NavBar from "../home/navBar/NavBar";
 import * as styles from "./yearsElements";
-import {courses} from "./yearOneData";
-import {courses2} from "./yearTwoData";
-import {courses3} from "./yearThreeData";
-import {courses4} from "./yearFourData";
+import {courses} from "./yearsData/yearOneData";
+import {courses2} from "./yearsData/yearTwoData";
+import {courses3} from "./yearsData/yearThreeData";
+import {courses4} from "./yearsData/yearFourData";
 import { useState } from "react";
 import CoursePopUp from "./CoursePopUp";
 
