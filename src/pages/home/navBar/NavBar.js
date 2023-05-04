@@ -4,6 +4,7 @@ const NavBar = () => {
 
     return(
         <nav className="nav">
+            hi
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/years">Years</Link></li>
