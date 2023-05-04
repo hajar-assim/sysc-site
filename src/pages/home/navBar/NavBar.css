@@ -11,16 +11,16 @@
     align-items: center;
     font-family: 'Brygada 1918', serif;
     font-size: 20px;
-} 
+    gap: 20px; 
+}
+
+
 
 .navbar .rightside {
     height: 100%;
     display: flex;
     align-items: center;
-    
-    
 }
-  
 
 .navbar a {
     color: white;
@@ -29,8 +29,13 @@
 }
 
 .navbar a:hover {
-    color: #CCCCFF;
-
+  background-color: #CCCCFF;
+  color: black;
+  box-sizing: border-box;
+  padding: 26px;
+  font-size: 35px;
+  border: 1px black;
+  transition: background-color 0.5s ease-out, color 0.5s ease-out;
 }
 
 .navbar .rightSide button {
