@@ -1,17 +1,22 @@
+
 import React from 'react';
 import * as styled from "./popup";
 
-function HelpPopUp() {
-  return(
+
+function HelpPopUp(props) {
+  return (props.trigger) ? (
     <styled.popUpBackground>
       <styled.popUpCard>
         <styled.textContainer>
-
-        <button> Close </button>
+        {props.children}
+        You can find your current CGPA and the number of credits that currently contritbute to your CGPA by running an audit on carleton central.
+            <img src = "audit.jpg" alt="not working"  style={{ maxWidth: '100%', maxHeight: '100%', width: '350px', height: '80px',border: '2px solid #ccc' }}/>
+            <img src = "creds.jpg" alt="not working"  style={{ maxWidth: '100%', maxHeight: '100%', width: '350px', height: '80px',  border: '2px solid #ccc' }}/>
+        <button onClick={() => props.setTrigger(false)} >Close</button>
         </styled.textContainer>
       </styled.popUpCard>
     </styled.popUpBackground>
-  );
+  ) : null;
 }
 
 export default HelpPopUp;

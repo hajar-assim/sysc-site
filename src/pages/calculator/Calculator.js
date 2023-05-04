@@ -2,11 +2,16 @@ import NavBar from "../home/navBar/NavBar";
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
-import * as styled from "./popup";
+
 import HelpPopUp from "./pop";
 
 const Calculator = () => {
     
+    const [buttonPopUp, setButtonPopUp] = useState(false);
+
+    const handleCourseClick = () => {
+        setButtonPopUp(true);
+    }
     
     const [cgpa,setCGPA] = useState();
     const [credits,setCredits] = useState();
@@ -45,7 +50,11 @@ const Calculator = () => {
         var sumCredits = (parseFloat(credits));
         for (let i = 0; i < newCredits.length; i++) {
             if(! isNaN(parseFloat(newCredits[i]))){
-                sumCredits += parseFloat(newCredits[i]);
+                if(parseFloat(newCredits[i]) < 0){
+                    alert("Cannot have a negative credit");
+                    return;
+                }
+                else{ sumCredits += parseFloat(newCredits[i]);}
             }
         }
 
@@ -146,26 +155,28 @@ const Calculator = () => {
         document.getElementById("results").innerHTML = '<p> </p>'
     }
 
-    function help(){
-        document.getElementById("help").innerHTML = '<p> ffjbndf</p>';  
-    }
 
     return (
-        <>
+        < >
         <NavBar/> 
-        <head><link rel="stylesheet" href="src/index.css" /></head>
+        
         <p>This CGPA calculator is in accordance with Carleton University's Grade Point Scale (12 point scale).</p>
         <p>Enter your current CGPA: <input type="number" value = {cgpa} onChange = {(event) => setCGPA(event.target.value)} /> </p> 
-        <p>Enter the number of credits: <input type="number" value = {credits} onChange = {(event) => setCredits(event.target.value)}/> <a class="help-icon" onclick={clear}><FontAwesomeIcon icon={faQuestionCircle} /></a></p>
-        <p id = "help">ff</p>
+        <p>Enter the number of credits: <input type="number" value = {credits} onChange = {(event) => setCredits(event.target.value)}/> <FontAwesomeIcon id = "help-icon" icon={faQuestionCircle} spin onClick={() => handleCourseClick()} style={{cursor:'pointer'}} /> </p>
+        <HelpPopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}>
+           
+        </HelpPopUp>
 
         <table>
+            <thead>
             <tr>
                 <th>Course Code </th>
                 <th> Credits</th>
                 <th> Grade </th>
             </tr>
+            </thead>
 
+            <tbody>
             <tr>
                 <th> <input placeholder = "ex: SYSC2004" value = {courseCode1} onChange = {(event) => setCourseCode1(event.target.value)}/> </th>
                 <th> <input type="number" placeholder = "ex: 0.50" value = {course1} onChange = {(event) => setCourse1(event.target.value)}/> </th>
@@ -192,10 +203,13 @@ const Calculator = () => {
                 <th> <input type="number" value = {course5} onChange = {(event) => setCourse5(event.target.value)}/> </th>
                 <th> <input value = {grade5} onChange = {(event) => setGrade5(event.target.value)} /> </th>
             </tr>
+            </tbody>
         </table>
         <button onClick={calc}>Calculate Now!</button>
         <button onClick = {clear}>Clear</button>
+        
         <div id="results"> </div>
+        
         </>
     );
 }
