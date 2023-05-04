@@ -1,6 +1,6 @@
 
 import React from 'react';
-import * as styled from "./popup";
+import * as styled from "./calculatorElements";
 
 
 function HelpPopUp(props) {

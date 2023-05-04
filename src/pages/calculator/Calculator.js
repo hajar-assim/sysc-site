@@ -2,7 +2,7 @@ import NavBar from "../home/navBar/NavBar";
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
-import * as styled from "./popup";
+import * as styles from "./calculatorElements";
 import HelpPopUp from "./pop";
 
 const Calculator = () => {
@@ -63,7 +63,7 @@ const Calculator = () => {
         var resultString = '';
 
         if (newCGPA.toFixed(2) == 'NaN') {
-            resultString = 'There was an error calculating your cgpa. Maybe you did something wrong.';
+            resultString = 'There was an error calculating your CGPA. Maybe you did something wrong.';
         } else {
             resultString = 'Your projected calculated CGPA is '+  newCGPA.toFixed(2);
         }
@@ -167,11 +167,13 @@ const Calculator = () => {
     return (
         < >
         <NavBar/> 
-        <head><link rel="stylesheet" href="src/index.css" /></head>
-        <p>This CGPA calculator is in accordance with Carleton University's Grade Point Scale (12 point scale).</p>
+        <styles.calculatorPageContent>
+        <p>This calculator is intended to show your projected CGPA after inputting hypothetical grades for future classes. This CGPA calculator is in accordance with Carleton University's Grade Point Scale (12 point scale).</p>
         <p>Enter your current CGPA: <input type="number" value = {cgpa} onChange = {(event) => setCGPA(event.target.value)} /> </p> 
-        <p>Enter the number of credits: <input type="number" value = {credits} onChange = {(event) => setCredits(event.target.value)}/> <a class="help-icon" onclick={clear}><FontAwesomeIcon icon={faQuestionCircle} /></a></p>
-        <p id = "help">ff</p>
+        <p>Enter the number of credits: <input type="number" value = {credits} onChange = {(event) => setCredits(event.target.value)}/> <FontAwesomeIcon id = "help-icon" icon={faQuestionCircle} spin onClick={() => handleCourseClick()} style={{cursor:'pointer'}} /> </p>
+        <HelpPopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}> </HelpPopUp>
+
+        <styles.tableContainer>
 
         <table>
             <thead>
@@ -211,9 +213,15 @@ const Calculator = () => {
             </tr>
             </tbody>
         </table>
-        <button onClick={calc}>Calculate Now!</button>
-        <button onClick = {clear}>Clear</button>
+        </styles.tableContainer>
+
+        <styles.buttonContainer>
+        <button onClick={calc}>calculate</button>
+        <button onClick = {clear}>clear</button>
+        </styles.buttonContainer>
+
         <div id="results"> </div>
+        </styles.calculatorPageContent>
         </>
     );
 }
