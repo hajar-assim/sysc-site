@@ -1,4 +1,5 @@
 import NavBar from "../home/navBar/NavBar";
+import { Link } from "react-router-dom";
 import * as styles from "./yearsElements";
 import {courses} from "./yearsData/yearOneData";
 import {courses2} from "./yearsData/yearTwoData";
@@ -8,12 +9,34 @@ import { useState } from "react";
 import CoursePopUp from "./CoursePopUp";
 
 const Years = () => {
+    
+    const allCourses = courses.concat(courses2,courses3,courses4)
+    
     const [buttonPopUp, setButtonPopUp] = useState(false);
     const [selectedCourse, setSelectedCourse] = useState('');
+
+    const [courseDescription,setcourseDescription] = useState('');
+    const [coursePrecludes,setCoursePrecludes] = useState('');
+    const [coursePrereqs,setCoursePrereqs] = useState('');
+    const [courseLink,setCourseLink] = useState('');
+
+    function getCourseDetails(title){
+        let foundItem = allCourses.find(item => item.title === title);
+        if(foundItem){
+            setcourseDescription(foundItem.detailedDescription);
+            setCoursePrecludes(foundItem.precludes);
+            setCoursePrereqs(foundItem.prerequisites);
+            setCourseLink(foundItem.link);
+
+        }
+    }
+    
     const handleCourseClick = (title) => {
         setButtonPopUp(true);
         setSelectedCourse(title);
+        getCourseDetails(title);
     }
+    
     return (
         <>
         <NavBar/>
@@ -66,9 +89,17 @@ const Years = () => {
 
         </styles.courseContainer>
 
+
         {/* pop up when you click a specific course */}
-        <CoursePopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}>
-            this was triggered for {selectedCourse}.
+        <CoursePopUp trigger={buttonPopUp} setTrigger={setButtonPopUp} course = {selectedCourse}>
+            
+           <p>{selectedCourse}.</p>  
+           <p>{courseDescription}</p> 
+           <p>{coursePrecludes}</p> 
+           <p>{coursePrereqs}</p>
+           
+           <Link to = {courseLink} target= "_blank"> <button>Material</button> </Link>
+
         </CoursePopUp>
         
         </>

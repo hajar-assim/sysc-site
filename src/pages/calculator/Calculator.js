@@ -37,6 +37,7 @@ const Calculator = () => {
     
     function calc() {
         var qualityPoints = parseFloat(cgpa) * parseFloat(credits);
+        const validGrades = ['F','D-','D','D+','C-','C','C+','B-','B','B+','A-','A','A+']
 
         var newGrades = convertGrades();
         var sumGrades = qualityPoints;
@@ -50,8 +51,13 @@ const Calculator = () => {
         var sumCredits = (parseFloat(credits));
         for (let i = 0; i < newCredits.length; i++) {
             if(! isNaN(parseFloat(newCredits[i]))){
+
                 if(parseFloat(newCredits[i]) < 0){
                     alert("Cannot have a negative credit");
+                    return;
+                }
+                else if(newGrades[i] == null){
+                    alert('Missing a Grade');
                     return;
                 }
                 else{ sumCredits += parseFloat(newCredits[i]);}
@@ -62,7 +68,7 @@ const Calculator = () => {
 
         var resultString = '';
 
-        if (newCGPA.toFixed(2) == 'NaN') {
+        if (newCGPA.toFixed(2) === 'NaN') {
             resultString = 'There was an error calculating your CGPA. Maybe you did something wrong.';
         } else {
             resultString = 'Your projected calculated CGPA is '+  newCGPA.toFixed(2);
@@ -77,6 +83,8 @@ const Calculator = () => {
         const creditList = [course1,course2,course3,course4,course5];
         const gradesList = [grade1,grade2,grade3,grade4,grade5];
 
+        const validGrades = ['F','D-','D','D+','C-','C','C+','B-','B','B+','A-','A','A+']
+
         const newGrades =[];
 
             for(let i = 0; i < gradesList.length; i++){
@@ -84,56 +92,11 @@ const Calculator = () => {
                 let x = gradesList[i].toUpperCase();
                 let gradePoint = creditList[i];
 
-                if(x === 'A+'){
-                    newGrades.push(12 * gradePoint);
+                if(validGrades.includes(x)){
+                    newGrades.push((validGrades.indexOf(x) * gradePoint));
                 }
-
-                else if(x === 'A'){
-                    newGrades.push(11 * gradePoint);
-                }
-
-                else if(x === 'A-'){
-                    newGrades.push(10 * gradePoint);
-                }
-
-                else if(x === 'B+'){
-                    newGrades.push(9 * gradePoint);
-                }
-
-                else if(x === 'B'){
-                    newGrades.push(8 * gradePoint);
-                }
-
-                else if(x === 'B-'){
-                    newGrades.push(7 * gradePoint);
-                }
-
-                else if(x === 'C+'){
-                    newGrades.push(6 * gradePoint);
-                }
-
-                else if(x === 'C'){
-                    newGrades.push(5 * gradePoint);
-                }
-
-                else if(x === 'C-'){
-                    newGrades.push(4 * gradePoint);
-                }
-
-                else if(x === 'D+'){
-                    newGrades.push(3 * gradePoint);
-                }
-
-                else if(x === 'D'){
-                    newGrades.push(2 * gradePoint);
-                }
-
-                else if(x === 'D-'){
-                    newGrades.push(1 * gradePoint);
-                }
-
-                else if(x === 'F'){
-                    newGrades.push(0 * gradePoint);
+                else if(x !== ''){
+                    alert('Invalid Grade Input');
                 }
             } 
     
