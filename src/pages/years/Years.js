@@ -1,6 +1,7 @@
 import NavBar from "../home/navBar/NavBar";
 import { Link } from "react-router-dom";
 import * as styles from "./yearsElements";
+import * as b from "../calculator/calculatorElements";
 import {courses} from "./yearsData/yearOneData";
 import {courses2} from "./yearsData/yearTwoData";
 import {courses3} from "./yearsData/yearThreeData";
@@ -92,14 +93,13 @@ const Years = () => {
 
         {/* pop up when you click a specific course */}
         <CoursePopUp trigger={buttonPopUp} setTrigger={setButtonPopUp} course = {selectedCourse}>
-            
-           <p>{selectedCourse}.</p>  
-           <p>{courseDescription}</p> 
-           <p>{coursePrecludes}</p> 
-           <p>{coursePrereqs}</p>
-           
-           <Link to = {courseLink} target= "_blank"> <button>Material</button> </Link>
-
+            <b.ButtonsContainer>
+            <p>{selectedCourse}.</p>
+            <Link to = {courseLink} target= "_blank"> <b.bButton>Material</b.bButton> </Link>
+            </b.ButtonsContainer>
+            <p>{courseDescription}</p> 
+            <p>{coursePrecludes}</p> 
+            <p>{coursePrereqs}</p>
         </CoursePopUp>
         
         </>

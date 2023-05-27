@@ -66,5 +66,8 @@ export const popUpCard = styled.div `
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     margin-top:9%;
     margin-left:25%;
+    padding: 23px;
 `
+
+
 

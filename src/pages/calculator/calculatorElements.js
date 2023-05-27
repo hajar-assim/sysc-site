@@ -13,6 +13,20 @@ export const tableContainer = styled.div`
     justify-content: left;
     text-align: left;
     width: 20%;
+    margin-top: 28px;
+    margin-right: 340px;
+    height: fit-content;
+`
+
+export const gradesContainer = styled.div`
+    display: flex;
+    flex-direction:row;
+`
+
+export const gradeDisplay = styled.div`
+    font-size: 18ch;
+    font-weight: bold;
+
 `
 
 export const buttonContainer = styled.div`
@@ -60,4 +74,27 @@ export const popUpCard = styled.div `
     margin-left:25%;
     backdrop-filter: blur(5px);
     padding: 8px;
+`
+
+export const bButton = styled.button`
+    background-color: black;
+    border-radius: 4px;
+    color: white;
+    font-family: 'Brygada 1918', serif;
+    border: none;
+    padding:6px;
+    margin: 2px;
+    font-size: 15px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #272727;
+    }
+
+`
+
+export const ButtonsContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+
 `

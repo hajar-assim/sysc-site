@@ -1,4 +1,5 @@
 import * as styled from "./yearsElements";
+import * as b from "../calculator/calculatorElements";
 
 function CoursePopUp(props) {
   return (props.trigger) ? (
@@ -8,9 +9,8 @@ function CoursePopUp(props) {
         <styled.textContainer>
         {props.children}
         
-        <button>Midterms/Tests</button>
-        <button>Exams</button>
-        <button onClick={() => props.setTrigger(false)}>Close</button>
+  
+        <b.bButton onClick={() => props.setTrigger(false)}>CLOSE</b.bButton>
         </styled.textContainer>
       </styled.popUpCard>
     </styled.popUpBackground>

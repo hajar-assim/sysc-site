@@ -37,7 +37,6 @@ const Calculator = () => {
     
     function calc() {
         var qualityPoints = parseFloat(cgpa) * parseFloat(credits);
-        const validGrades = ['F','D-','D','D+','C-','C','C+','B-','B','B+','A-','A','A+']
 
         var newGrades = convertGrades();
         var sumGrades = qualityPoints;
@@ -71,10 +70,12 @@ const Calculator = () => {
         if (newCGPA.toFixed(2) === 'NaN') {
             resultString = 'There was an error calculating your CGPA. Maybe you did something wrong.';
         } else {
-            resultString = 'Your projected calculated CGPA is '+  newCGPA.toFixed(2);
+            resultString = 'Your projected calculated CGPA is '+  newCGPA.toFixed(2) + '.';
         }
 
         document.getElementById("results").innerHTML = '<p>' + resultString + '</p>';
+
+        return newCGPA;
         
     }
 
@@ -136,6 +137,8 @@ const Calculator = () => {
         <p>Enter the number of credits: <input type="number" value = {credits} onChange = {(event) => setCredits(event.target.value)}/> <FontAwesomeIcon id = "help-icon" icon={faQuestionCircle} spin onClick={() => handleCourseClick()} style={{cursor:'pointer'}} /> </p>
         <HelpPopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}> </HelpPopUp>
 
+        <styles.gradesContainer>
+
         <styles.tableContainer>
 
         <table>
@@ -178,10 +181,17 @@ const Calculator = () => {
         </table>
         </styles.tableContainer>
 
+        <styles.gradeDisplay>
+            A+
+        </styles.gradeDisplay>
+
+        </styles.gradesContainer>
+
         <styles.buttonContainer>
-        <button onClick={calc}>calculate</button>
-        <button onClick = {clear}>clear</button>
+        <styles.bButton onClick={calc}>calculate</styles.bButton>
+        <styles.bButton onClick = {clear}>clear</styles.bButton>
         </styles.buttonContainer>
+        
 
         <div id="results"> </div>
         </styles.calculatorPageContent>
