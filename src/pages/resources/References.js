@@ -4,8 +4,8 @@ import NavBar from "../home/navBar/NavBar";
 function References() {
   return (
     <div>
-       <NavBar />
-       references
+      <NavBar />
+      references
     </div>
   )
 }

@@ -6,6 +6,7 @@ import References from './pages/resources/References';
 import Years from './pages/years/Years';
 import Calculator from './pages/calculator/Calculator';
 import Faq from './pages/resources/Faq';
+import Chatroom from './pages/resources/Chatroom';
 
 import Math1004 from './pages/years/coursesData/MATH1004/Math1004';
 import Chem1101 from './pages/years/coursesData/Chem1101';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/references" element = {<References/>} />
         <Route path="/calculator" element = {<Calculator/>} />
         <Route path="/faq" element = {<Faq/>} />
+        <Route path="/chatroom" element = {<Chatroom/>} />
 
         <Route path = "/years/Math1004" element = {<Math1004/>} />
         <Route path = "/years/Chem1101" element = {<Chem1101/>} />

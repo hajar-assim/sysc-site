@@ -37,6 +37,23 @@ const Years = () => {
         setSelectedCourse(title);
         getCourseDetails(title);
     }
+
+    const LogoComponent = () => {
+        return (
+          <img
+            src="https://carleton.ca/brand/wp-content/uploads/social-media-sample-red-247w-1.png"
+            alt="Logo"
+            style={{
+              position: 'absolute',
+              top: '200px',
+              left: '500px',
+              width: '100px',
+              height: '100px',
+            }}
+          />
+        );
+      };
+      
     
     return (
         <>
@@ -93,13 +110,21 @@ const Years = () => {
 
         {/* pop up when you click a specific course */}
         <CoursePopUp trigger={buttonPopUp} setTrigger={setButtonPopUp} course = {selectedCourse}>
-            <b.ButtonsContainer>
-            <p>{selectedCourse}.</p>
-            <Link to = {courseLink} target= "_blank"> <b.bButton>Material</b.bButton> </Link>
-            </b.ButtonsContainer>
+            <LogoComponent />
+            <header style={{ marginRight: '450px' }}>
+                <h1>{selectedCourse}</h1>
+            </header>
+
             <p>{courseDescription}</p> 
             <p>{coursePrecludes}</p> 
             <p>{coursePrereqs}</p>
+
+            <b.ButtonsContainer>
+            
+            <Link to = {courseLink} target= "_blank"> <b.bButton>Material</b.bButton> </Link>
+            <Link to = {courseLink} target= "_blank"> <b.bButton>Practice Problems</b.bButton> </Link>
+            <Link to = {courseLink} target= "_blank"> <b.bButton>Chatroom</b.bButton> </Link>
+            </b.ButtonsContainer>
         </CoursePopUp>
         
         </>

@@ -11,6 +11,8 @@ const NavBar = () => {
                 <Link to="/references">references</Link>
                 <Link to="/calculator">grade calculator</Link>
                 <Link to="/faq">faq</Link>
+                <Link to="/chatroom">chatroom</Link>
+
         </div>
     );
 }
