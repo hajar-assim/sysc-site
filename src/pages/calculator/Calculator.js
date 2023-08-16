@@ -6,6 +6,7 @@ import * as styles from "./calculatorElements";
 import HelpPopUp from "./pop";
 
 const Calculator = () => {
+
     
     const [buttonPopUp, setButtonPopUp] = useState(false);
 
@@ -15,6 +16,8 @@ const Calculator = () => {
     
     const [cgpa,setCGPA] = useState();
     const [credits,setCredits] = useState();
+
+    const [letterGPA,setLetterGPA] = useState("");
 
     const [course1, setCourse1] = useState();
     const [course2, setCourse2] = useState();
@@ -37,6 +40,7 @@ const Calculator = () => {
     
     function calc() {
         var qualityPoints = parseFloat(cgpa) * parseFloat(credits);
+        const validGrades = ['F','D-','D','D+','C-','C','C+','B-','B','B+','A-','A','A+']
 
         var newGrades = convertGrades();
         var sumGrades = qualityPoints;
@@ -71,6 +75,7 @@ const Calculator = () => {
             resultString = 'There was an error calculating your CGPA. Maybe you did something wrong.';
         } else {
             resultString = 'Your projected calculated CGPA is '+  newCGPA.toFixed(2) + '.';
+            setLetterGPA(validGrades[Math.floor(newCGPA)])
         }
 
         document.getElementById("results").innerHTML = '<p>' + resultString + '</p>';
@@ -182,13 +187,13 @@ const Calculator = () => {
         </styles.tableContainer>
 
         <styles.gradeDisplay>
-            A+
+            {letterGPA}
         </styles.gradeDisplay>
 
         </styles.gradesContainer>
 
         <styles.buttonContainer>
-        <styles.bButton onClick={calc}>calculate</styles.bButton>
+        <styles.bButton onClick={calc}  >calculate</styles.bButton>
         <styles.bButton onClick = {clear}>clear</styles.bButton>
         </styles.buttonContainer>
         

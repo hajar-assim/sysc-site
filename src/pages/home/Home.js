@@ -1,6 +1,6 @@
 import NavBar from "../home/navBar/NavBar";
 import * as styles from "./homeElements";
-
+import Footer from "./navBar/Footer";
 
 const Home = () => {
     return (
@@ -17,6 +17,7 @@ const Home = () => {
             </styles.textContainer>
 
         </styles.homePageContent>
+        <Footer/>
         
         </>
     );

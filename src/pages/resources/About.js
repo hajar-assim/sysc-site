@@ -1,0 +1,29 @@
+import React from "react";
+import NavBar from "../home/navBar/NavBar";
+
+const About = () => {
+  return (
+    <div className="about-page">
+        <NavBar />
+      <h1>About Us</h1>
+      <p>
+        About us info. How it all started. Meet the team!   
+      </p>
+
+      <h1> Hasib Khodayer - The Founder </h1>
+      <h2> It all started with this man who had a burning passion inside him, a desire to help people. People who were suffering just as he once was, he said "If we can give these people a better chance than what we had, then that we shall do.". He himself brought a group of three lost individual souls who were living a meaningless life with no purpose. He proposed to them, this idea. This revolutionary project. No longer shall we be looked down upon. No longer we shall be suffering through coop searches. For we have created something that will have the rest look at us in awe. Thus is the man Hasib Khodayer. Our savior, helper of the people, holder of knowledge. </h2>
+    
+      <h1> Mahad Ahmed - The Ghost Writer </h1>
+      <h2> In the absolute darkness, this man is nowhere to be seen. Nowhere to be found. It is said that he has travelled across the virtual worlds in search of his purpose during the aftermath of failing to locate a COOP position. Within the dark world of which the Elden Lord Mahad resides, he was approached by his long lost friend, the Hasib Khodayer. Hasib said, "Bring me your talents, I will bring all of which can be accomplished", Mahad jolted, "Impossible! We face people with careers dictated from the moment of their birth. We exist in a world of nepotism. How can someone of our nature hope to surpass them??". Hasib expression never wavered. Like an endless smile. He reached his hand out to him and stated, "Nuh uh". Hasib then explained this project to Mahad, thus the Ghost Writer was enlisted for this superb and vast project.</h2>
+
+      <h1> Hajar Assim - The Co-Founder/Jester </h1>
+      <h2> What can be said about Hajar Assim that cannot be equally said for a genius. Her feats expand the cosmos ranging from the mass manipulation of students to further her education to the bottomless pit of academic potential stemming from a need to impress her divorced parents. Despite sitting at the top, she is a slave to the term "the grass is greener on the other side." Night after night, she is stuck in an endless void, chasing a high that can never be reached. Until, he came. Before this very moment, the Hasib Khodayer watched in the background. Breakdown after breakdown. Until he who is knowledgeable, acknowledged her intelligence. He said, "You can bring a horse to the river, but you cannot make it drink." Hajar who is egostitical, replied "Who do you think you are? You have the eyes of a lost person, a individual with no dream. I have a dream. I want to make over $200,000 annually by the time I graduate." Hasib Khodayer laughed, for the first time in a while, to the point of tears. "The world is a circle, at the top is the rich, the bottom is the poor, and in the middle is the middle class. As time progresses, the circle rotates, in no time, the rich is now the poor, the poor is now the rich, but who remains unaffected by the circle? The middle class. Know your place in society, it may very well change. For better? For worse? Time will tell." Hajar fell to her knees, "This man, he succeeds me in every way, I must learn his story, I must find out more." She requested to follow his path and story. Hasib granted her permission and designed this project along side her. This project, only the most knowledgable can design.  </h2>
+
+      <h1> Yusuf Ibrahim - The Knowledgable One of Academic Violations </h1>
+      <h2> Dr. Yusuf Ibrahim, a young man who was saved from the depths of depression. He was found on the streets of library road smoking a malboro cigerette descending into nothingness when the knowledgable one (Hasib Khodayar) found him. Hasib reached out his hand and said to him "Look at your cigerette, as you continue to inhale and exhale, do you not see it getting smaller? Thus is your life, after every puff you become more insignificant until you become like the butt of your cigarette, thrown on the ground and stepped upon. Come join me, I shall show you that there is more to life than misery". Yusuf was flabbergastered, up until this point, all he saw was a gray world. All of a sudden, a bright vibrant individual stood before him. He was in disbelief, he said "Do not fabricate lies, what pyramid scheme do you plan to rope me in?" Hasib surpised, he cannot fathom such a unobservant question. Hasib responded, "Can a stranger not show support to another? Have we entered a society where we do not question men yelling and hissing towards women of no relation on the street but we question whenever we receive support. How much has your pride risen?", Yusuf replied "It is not a sense of pride, rather a sense of safety. Now leave me alone." Hasib stared quietly and analzyed him. "You wear fancy clothing, did you purchase this yourself", before Yusuf can respond, "Do you have any idea the sarcrifices that your parents have made for you? Do you intend to waste their efforts like this? Then so be it. Proceed as you want, but one night will come. One night when all is fallen and begone." Yusuf cigerette fell to the ground. Tear streamed down his face, "I must change. Guide me brother." Hasib turned and begin to walk. Yusuf stumbled to catch up. As they walked, Hasib informed him of his plan, in which Yusuf desired to be involved. This was a man who had suffered through not one, not two, not three but four Academic Integirty Violations, a man who at one glance would seem hopeless, until he was rescued by The Founder. Hasib Khodayar gave him purpose, motivation, a new look upon life. A life in which he can make the most of his potential, a life he can be proud of. </h2>
+    
+    </div>
+  );
+};
+
+export default About;

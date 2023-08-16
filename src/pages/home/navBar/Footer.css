@@ -1,0 +1,81 @@
+.line{
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #CCCCFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Brygada 1918', serif;
+  font-size: 20px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Brygada 1918', serif;
+  font-size: 20px;
+  gap: 20px; 
+  
+}
+
+.foot{
+  color: #ffffff;
+}
+
+
+.footer .rightside {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.footer a:hover {
+  color: #CCCCFF;
+}
+
+  
+.footer .rightSide svg {
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+    .footer .rightSide a {
+      width: 70px;
+    }
+    .footer .leftSide {
+      padding-left: 50px;
+    }
+}
+  
+@media only screen and (max-width: 600px) {
+    .footer .rightSide a {
+      display: none;
+    }
+  
+    .footer .rightSide {
+      justify-content: flex-end;
+      padding-right: 50px;
+    }
+  
+    .footer .rightSide button {
+      display: inherit;
+    }
+}
