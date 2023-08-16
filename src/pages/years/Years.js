@@ -6,6 +6,7 @@ import {courses} from "./yearsData/yearOneData";
 import {courses2} from "./yearsData/yearTwoData";
 import {courses3} from "./yearsData/yearThreeData";
 import {courses4} from "./yearsData/yearFourData";
+import SearchBar from "./searchBar";
 import { useState } from "react";
 import CoursePopUp from "./CoursePopUp";
 
@@ -58,6 +59,9 @@ const Years = () => {
     return (
         <>
         <NavBar/>
+
+        <SearchBar/>
+        
 
         {/* list of courses in boxes visual skeleton */}
         <styles.yearTitle>year one</styles.yearTitle>
