@@ -11,8 +11,6 @@ const NavBar = () => {
                 <Link to="/resources">resources</Link>
                 <Link to="/calculator">grade calculator</Link>
                 <Link to="/faq">faq</Link>
-                <Link to="/About">about us</Link>
-
         </div>
     );
 }

@@ -1,31 +1,37 @@
 body {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: flex-start; 
   height: 100vh; 
+
 }
 
 .faq {
   margin-bottom: 20px;
   width: 400px;
   font-size: 20px;
+  position: center;
 }
 
 .container {
-  position: relative;
+  position: center;
 }
 
 .question {
   cursor: pointer;
-  background-color: #ffb4b4;
+  background-color: #000;
+  border: 1px solid black;
   padding: 10px;
+  padding-right: 10px;
   width: 500px;
   font-size: 20px;
+  color:white;
   position: relative;
 }
 
 .answer {
-  background-color: #fbcece;
+  background-color: #fff;
+  border: 1px solid black;
   padding: 10px;
   font-size: 18px;
   position: relative;
@@ -44,7 +50,7 @@ body {
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
-  border: solid #000;
+  border: solid #fff;
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 2px;

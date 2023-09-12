@@ -7,7 +7,8 @@ const Footer = () => {
        <>
        <div className="line"></div>
        <div className="footer">
-           <div className="rightside"> <p className="foot">@2023 Carleton University</p></div>
+           <div className="rightside"> <p className="foot">© sysc sucess
+</p></div>
      
            </div>
        

@@ -98,3 +98,7 @@ export const ButtonsContainer = styled.div`
     flex-direction: row;
 
 `
+
+export const IconContainer = styled.div`
+    font-family: FontAwesome;
+`

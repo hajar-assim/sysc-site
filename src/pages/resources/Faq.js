@@ -7,21 +7,22 @@ const Faq = () => {
   return (
     <div>
       <NavBar/>
-      <h1> The FAQ</h1>
-      <p>University life can be challenging, which is why we're thrilled to provide you with this comprehensive support hub. Whether you're a freshman 
+      <div content="left">
+      <h1 style={{ textAlign: 'left' }}> The FAQ</h1>
+      <p style={{ textAlign: 'left' }}>University life can be challenging, which is why we're thrilled to provide you with this comprehensive support hub. Whether you're a freshman 
         trying to find your way around or a senior student in depresate need of some extra help, our study tool is designed to assist you every step of 
         the way. Below, you'll find answers to frequently asked questions that cover a wide range of university-related topics, from how to navigate 
         through an academic intergrity violation to how different services at Carleton works. If you can't find what you're looking for, don't hesitate 
         to reach out to our dedicated support team by e-mail, <a href="mailto:yokaielwahid@gmail.com">yokaielwahid@gmail.com</a>, or  
         <a href="https://discord.gg/8QA5ZucC"> join our discord server</a></p>
-
+        </div>
        
 
       <CollapseItem
         question="I failed a class."
         answer={
           <>
-            Tough luck, there is a few things to tackle before we do anything. First, find the root of the problem. Did you fail because of a lack of studying, 
+            Tough luck. There is a few things to tackle before we do anything. First, find the root of the problem. Did you fail because of a lack of studying, 
             an external factor, or just tried your best and fell short? Regardless of your answer, head over to Carleton Central and find if the course is 
             offered in the following term (i.e. failed in Fall so check for Winter). You want to take the course as soon as possible so you do not derail yourself. 
             Next, check if the failed course is a prerequisite for any of your future courses. If its not, perfect you can take it in another semester if the following 
@@ -55,7 +56,7 @@ const Faq = () => {
 
 
       <CollapseItem
-        question="I do not meet a prerequisite "
+        question="I do not meet a prerequisite."
         answer={
           <>
           Apply for an override as soon as possible. It's not a guarantee since priority will go to those who qualify and need the course to graduate, but 
@@ -68,7 +69,7 @@ const Faq = () => {
 
 
       <CollapseItem
-        question="I failed a course and the next term course for it is full "
+        question="I failed a course and the next term course for it is full."
         answer={
           <>
           
@@ -78,7 +79,7 @@ const Faq = () => {
 
 
       <CollapseItem
-        question="i got an AI "
+        question="I recieved an Academic Integrity Violation, what do I do?"
         answer={
           <>
           

@@ -7,7 +7,6 @@ import Years from './pages/years/Years';
 import Calculator from './pages/calculator/Calculator';
 import Faq from './pages/resources/Faq';
 
-import About from './pages/resources/About';
 
 import Math1004 from './pages/years/coursesData/yearOne/Math1004';
 import Ecor1041 from './pages/years/coursesData/yearOne/Ecor1041';
@@ -35,8 +34,6 @@ function App() {
         <Route path="/resources" element = {<Resources/>} />
         <Route path="/calculator" element = {<Calculator/>} />
         <Route path="/faq" element = {<Faq/>} />
-
-        <Route path="/about" element = {<About/>} />
 
         <Route path = "/years/Math1004" element = {<Math1004/>} />
         <Route path = "/years/Chem1101" element = {<Chem1101/>} />
