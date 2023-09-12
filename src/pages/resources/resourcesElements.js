@@ -5,7 +5,6 @@ export const resourcePageContent = styled.div`
     flex-direction: column;
     justify-content: left;
     text-align: left;
-  
 `
 
 export const titles = styled.h1`

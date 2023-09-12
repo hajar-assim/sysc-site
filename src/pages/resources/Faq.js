@@ -2,10 +2,11 @@ import React from "react";
 import CollapseItem from "./CollapseItem";
 import './Faq.css';
 import NavBar from "../home/navBar/NavBar";
+import Footer from "../home/navBar/Footer";
 
 const Faq = () => {
   return (
-    <div>
+    <div className="faqcontent">
       <NavBar/>
       <div content="left">
       <h1 style={{ textAlign: 'left' }}> The FAQ</h1>
@@ -117,6 +118,7 @@ const Faq = () => {
         }
       />
 
+      <Footer/>
 
     </div>
   );

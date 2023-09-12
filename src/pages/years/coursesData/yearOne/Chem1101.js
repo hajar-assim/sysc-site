@@ -1,6 +1,11 @@
+import * as styles from "./courseElements";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faFlaskVial} from '@fortawesome/free-solid-svg-icons';
+
 const Chem1101 = () =>{
     return (
         <>
+        <styles.courseName>Chem 1101  <FontAwesomeIcon icon={faFlaskVial} style={{color: "#000000",}} /></styles.courseName>
 
         <h1>Past Exams for Chem1101:</h1>
         <div>

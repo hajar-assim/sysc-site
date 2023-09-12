@@ -53,6 +53,17 @@ function Resources() {
     <p > <a href='https://discord.gg/fvdmVyZbJx' target="blank">Carleton Computer Science Society</a> </p>
     <p> <a href='https://discord.gg/7w6tudKQZ5' target="_blank"> Systems and Computer Engineering Society</a> </p>
     </styles.textContainer>
+
+
+    <styles.titles>Scheduling Tools:</styles.titles>
+
+    <styles.textContainer>
+      <p><a href='https://ughelp.sce.carleton.ca/plan/' target="_blank">Course Planner</a></p>
+      <p><a href='https://cuscheduling.ca' target="_blank">Schedule Planner</a></p>
+    </styles.textContainer>
+
+
+
     </styles.resourcePageContent>
     <Footer/>
     </>

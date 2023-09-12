@@ -1,8 +1,8 @@
 import './App.css';
 
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import Home from './pages/home/Home';
 
+import Home from './pages/home/Home';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Years from './pages/years/Years';
 import Calculator from './pages/calculator/Calculator';
 import Faq from './pages/resources/Faq';
@@ -30,11 +30,15 @@ function App() {
     
       <Routes>
         <Route path="/" element = {<Home/>} />
-        <Route path="/years" element = {<Years/>} />
+        <Route path="/courses" element = {<Years/>} />
         <Route path="/resources" element = {<Resources/>} />
         <Route path="/calculator" element = {<Calculator/>} />
         <Route path="/faq" element = {<Faq/>} />
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         <Route path = "/years/Math1004" element = {<Math1004/>} />
         <Route path = "/years/Chem1101" element = {<Chem1101/>} />
         <Route path = "/years/Math1104" element = {<Math1104/>} />

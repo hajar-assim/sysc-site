@@ -2,8 +2,10 @@ import NavBar from "../home/navBar/NavBar";
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
+import { faCalculator } from '@fortawesome/free-solid-svg-icons'
 import * as styles from "./calculatorElements";
 import HelpPopUp from "./pop";
+import Footer from "../home/navBar/Footer";
 
 const Calculator = () => {
 
@@ -199,7 +201,15 @@ const Calculator = () => {
         
 
         <div id="results"> </div>
+
+        <FontAwesomeIcon icon={faCalculator} bounce size="2xl" style={{"--fa-primary-color": "#ccccff", "--fa-secondary-color": "#000000", marginTop: "70px"}} />
+   
         </styles.calculatorPageContent>
+
+        
+        
+        
+        <Footer/>
         </>
     );
 }

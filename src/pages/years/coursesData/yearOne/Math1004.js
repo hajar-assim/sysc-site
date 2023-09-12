@@ -1,11 +1,13 @@
-
+import * as styles from "./courseElements";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faSquareRootVariable} from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 
 const Math1004 = () =>{
 
     return (
         <>
-        
+        <styles.courseName>Math 1004  <FontAwesomeIcon icon={faSquareRootVariable} style={{color: "#000000",}} /></styles.courseName>
         <h1>Past Tests for Math1004:</h1>
 
         <div>

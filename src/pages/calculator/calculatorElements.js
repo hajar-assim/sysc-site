@@ -53,6 +53,7 @@ export const textContainer = styled.div`
 
 // pop up background
 export const popUpBackground = styled.div`
+
     position: fixed;
     top:0;
     left: 0;
@@ -70,8 +71,8 @@ export const popUpCard = styled.div `
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    margin-top:9%;
-    margin-left:25%;
+    margin: auto;
+    margin-top: 15%;
     backdrop-filter: blur(5px);
     padding: 8px;
 `
@@ -97,8 +98,11 @@ export const ButtonsContainer = styled.div`
     display: flex;
     flex-direction: row;
 
+<<<<<<< Updated upstream
 `
 
 export const IconContainer = styled.div`
     font-family: FontAwesome;
+=======
+>>>>>>> Stashed changes
 `

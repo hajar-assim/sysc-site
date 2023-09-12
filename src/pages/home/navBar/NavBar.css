@@ -3,29 +3,45 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 75px;
+    height: 50px;
     background-color: black;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     justify-content: center;
     align-items: center;
     font-family: 'Brygada 1918', serif;
-    font-size: 20px;
+    font-size: 18px;
     gap: 20px; 
 }
 
-
-
-.navbar .rightside {
+.navbar.leftSide{
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    color: black;
+}
+
+.navbar .center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.rightSide{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    justify-content: flex-end;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    margin: 20px;
+    margin: 15px;
 }
 
 .navbar a:hover {
@@ -36,6 +52,7 @@
   border: 1px black;
   transition: background-color 0.5s ease-out, color 0.5s ease-out; */
 }
+
 
 .navbar .rightSide button {
     background-color: transparent;
@@ -70,4 +87,14 @@
     .navbar .rightSide button {
       display: inherit;
     }
+}
+.button{
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #CCCCFF; /* Text color */
+    border: 2px solid #CCCCFF; /* Button border color */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+    background-color: black;
 }
