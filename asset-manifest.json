@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sysc-site/static/css/main.74ccc462.css",
-    "main.js": "/sysc-site/static/js/main.3578c0c7.js",
+    "main.js": "/sysc-site/static/js/main.30bcd250.js",
     "static/js/787.3e0b7ed9.chunk.js": "/sysc-site/static/js/787.3e0b7ed9.chunk.js",
     "index.html": "/sysc-site/index.html",
     "main.74ccc462.css.map": "/sysc-site/static/css/main.74ccc462.css.map",
-    "main.3578c0c7.js.map": "/sysc-site/static/js/main.3578c0c7.js.map",
+    "main.30bcd250.js.map": "/sysc-site/static/js/main.30bcd250.js.map",
     "787.3e0b7ed9.chunk.js.map": "/sysc-site/static/js/787.3e0b7ed9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74ccc462.css",
-    "static/js/main.3578c0c7.js"
+    "static/js/main.30bcd250.js"
   ]
 }
