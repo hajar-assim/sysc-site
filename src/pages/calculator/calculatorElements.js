@@ -98,11 +98,8 @@ export const ButtonsContainer = styled.div`
     display: flex;
     flex-direction: row;
 
-<<<<<<< Updated upstream
 `
 
 export const IconContainer = styled.div`
     font-family: FontAwesome;
-=======
->>>>>>> Stashed changes
 `

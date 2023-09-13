@@ -39,21 +39,7 @@ const Years = () => {
         getCourseDetails(title);
     }
 
-    const LogoComponent = () => {
-        return (
-          <img
-            src="https://carleton.ca/brand/wp-content/uploads/social-media-sample-red-247w-1.png"
-            alt="Logo"
-            style={{
-              position: 'absolute',
-              top: '200px',
-              left: '500px',
-              width: '100px',
-              height: '100px',
-            }}
-          />
-        );
-      };
+    
       
     
     return (
@@ -114,7 +100,7 @@ const Years = () => {
 
         {/* pop up when you click a specific course */}
         <CoursePopUp trigger={buttonPopUp} setTrigger={setButtonPopUp} course = {selectedCourse}>
-            <LogoComponent />
+            
             <header style={{ marginRight: '450px' }}>
                 <h1>{selectedCourse}</h1>
             </header>

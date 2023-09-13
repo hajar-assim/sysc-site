@@ -35,10 +35,7 @@ function App() {
         <Route path="/calculator" element = {<Calculator/>} />
         <Route path="/faq" element = {<Faq/>} />
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
         <Route path = "/years/Math1004" element = {<Math1004/>} />
         <Route path = "/years/Chem1101" element = {<Chem1101/>} />
         <Route path = "/years/Math1104" element = {<Math1104/>} />

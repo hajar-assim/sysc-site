@@ -22,8 +22,6 @@ const NavBar = () => {
                 <Link to="/resources">resources</Link>
                 <Link to="/calculator">gpa calculator</Link>
                 <Link to="/faq">faq</Link>
-<<<<<<< Updated upstream
-=======
                 </div>
                 
             <div className="rightside">
@@ -33,7 +31,6 @@ const NavBar = () => {
 
             
 
->>>>>>> Stashed changes
         </div>
 
     );
